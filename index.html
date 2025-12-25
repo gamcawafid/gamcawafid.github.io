@@ -1,119 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>GAMCA / WAFID Medical Appointment Services</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {margin:0; font-family: Arial, Helvetica, sans-serif; background:#f5f7fa; color:#333;}
-a{text-decoration:none;}
-/* Header */
-header{background:#0a4c8a; color:#fff; padding:20px 10px; text-align:center; position:relative;}
-header img{max-height:80px; display:block; margin:0 auto 10px;}
-header h1{margin:5px 0; font-size:26px; font-weight:bold;}
-header p{margin:5px 0; font-size:16px;}
-/* Banner */
-.banner{width:100%; max-height:200px; object-fit:cover; margin-bottom:15px;}
-/* Sections */
-section{padding:25px; max-width:1100px; margin:auto;}
-h2{color:#0a4c8a; margin-bottom:15px; font-size:22px;}
-.services{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:15px;}
-.services div{background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,.1); text-align:center; font-weight:bold; transition:0.3s;}
-.services div:hover{transform:translateY(-5px); box-shadow:0 4px 12px rgba(0,0,0,.15);}
-ol li{margin-bottom:10px; font-size:16px;}
-/* Form */
-form{background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,.1); max-width:600px; margin:auto;}
-form input, form select{width:100%; padding:12px; margin:8px 0; border-radius:5px; border:1px solid #ccc; font-size:15px;}
-form button{background:#0a4c8a; color:#fff; padding:14px; border:none; border-radius:5px; font-weight:bold; cursor:pointer; font-size:16px; transition:0.3s;}
-form button:hover{background:#08396b;}
-/* Footer */
-footer{background:#0a4c8a; color:#fff; text-align:center; padding:20px; margin-top:30px; font-size:14px;}
-/* Floating WhatsApp Button */
-.whatsapp-btn{position:fixed; bottom:20px; right:20px; background:#25d366; color:#fff; padding:15px 20px; border-radius:50px; font-weight:bold; box-shadow:0 4px 12px rgba(0,0,0,.2); z-index:1000; transition:0.3s; font-size:16px;}
-.whatsapp-btn:hover{background:#1ebe57;}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAMCA / WAFID Medical Appointment</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; background:#f5f9fc; color:#333}
+    header {background:#0b5ed7; color:#fff; padding:25px; text-align:center}
+    header h1 {margin:0; font-size:26px}
+    header p {margin-top:8px}
+    .container {padding:20px; max-width:1100px; margin:auto}
+    .hero-btn {display:inline-block; margin-top:15px; padding:12px 20px; background:#25D366; color:#fff; text-decoration:none; border-radius:6px; font-weight:bold}
+    .section-title {text-align:center; margin:40px 0 20px; font-size:22px}
+    .countries {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px}
+    .card {background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.08)}
+    .card h3 {margin-top:0}
+    .card a {display:inline-block; margin-top:10px; padding:10px 15px; background:#0b5ed7; color:#fff; text-decoration:none; border-radius:5px}
+    form {background:#fff; padding:25px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.08)}
+    label {display:block; margin-top:12px; font-weight:bold}
+    input, select {width:100%; padding:10px; margin-top:6px; border-radius:5px; border:1px solid #ccc}
+    .submit-btn {margin-top:20px; background:#25D366; color:#fff; padding:12px; border:none; width:100%; border-radius:6px; font-size:16px; cursor:pointer}
+    footer {background:#0b5ed7; color:#fff; text-align:center; padding:15px; margin-top:40px; font-size:14px}
+    .whatsapp-icon {vertical-align:middle; margin-right:6px}
+  </style>
 </head>
 <body>
 
 <header>
-<!-- Custom Logo -->
-<img src="https://via.placeholder.com/250x80?text=Your+Logo" alt="GAMCA/WAFID Logo">
-<h1>GAMCA / WAFID Medical Appointment Services</h1>
-<p>Fast • Reliable • Online Medical Appointment</p>
-<!-- Banner Image -->
-<img class="banner" src="https://via.placeholder.com/1200x250?text=GAMCA/WAFID+Medical+Appointments" alt="Banner">
+  <h1>GAMCA / WAFID Medical Appointment</h1>
+  <p>Fast & Reliable Medical Appointment Booking</p>
+  <a class="hero-btn" href="#form">📲 Book Appointment on WhatsApp</a>
 </header>
 
-<section>
-<h2>Our Services</h2>
-<div class="services">
-<div>Saudi Arabia (GAMCA Medical)</div>
-<div>UAE / Dubai (WAFID)</div>
-<div>Qatar (WAFID)</div>
-<div>Bahrain (WAFID)</div>
-<div>Oman (WAFID)</div>
-<div>Kuwait (WAFID)</div>
+<div class="container">
+
+  <h2 class="section-title">Book Appointment by Country</h2>
+  <div class="countries">
+    <div class="card">
+      <h3>🇸🇦 Saudi Arabia</h3>
+      <p>GAMCA / WAFID Medical Appointment</p>
+      <a href="#form">Book for Saudi Arabia</a>
+    </div>
+    <div class="card">
+      <h3>🇶🇦 Qatar</h3>
+      <p>GAMCA / WAFID Medical Appointment</p>
+      <a href="#form">Book for Qatar</a>
+    </div>
+    <div class="card">
+      <h3>🇴🇲 Oman</h3>
+      <p>GAMCA / WAFID Medical Appointment</p>
+      <a href="#form">Book for Oman</a>
+    </div>
+    <div class="card">
+      <h3>🇧🇭 Bahrain</h3>
+      <p>GAMCA / WAFID Medical Appointment</p>
+      <a href="#form">Book for Bahrain</a>
+    </div>
+  </div>
+
+  <h2 class="section-title" id="form">Appointment Request Form</h2>
+  <form onsubmit="sendWhatsApp(); return false;">
+    <label>Full Name</label>
+    <input type="text" id="name" required>
+
+    <label>Passport Number</label>
+    <input type="text" id="passport" required>
+
+    <label>Visa Country</label>
+    <select id="country" required>
+      <option value="Saudi Arabia">Saudi Arabia</option>
+      <option value="Qatar">Qatar</option>
+      <option value="Oman">Oman</option>
+      <option value="Bahrain">Bahrain</option>
+    </select>
+
+    <label>Visa Type</label>
+    <select id="visa" required>
+      <option value="Work">Work</option>
+      <option value="Family">Family</option>
+    </select>
+
+    <label>Medical City</label>
+    <input type="text" id="city" required>
+
+    <label>WhatsApp Number</label>
+    <input type="text" id="phone" required>
+
+    <label>Passport Copy (Attachment)</label>
+    <input type="file" id="passportFile" accept="image/*,application/pdf" required>
+
+    <button class="submit-btn" type="submit">
+      <img class="whatsapp-icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="18">
+      Send Details on WhatsApp
+    </button>
+  </form>
 </div>
-</section>
-
-<section>
-<h2>How It Works</h2>
-<ol>
-<li>Contact us on WhatsApp</li>
-<li>Share passport & visa details</li>
-<li>Receive medical appointment token</li>
-<li>Visit medical center</li>
-</ol>
-</section>
-
-<section>
-<h2>Book Your Appointment</h2>
-<form id="appointmentForm">
-<input type="text" id="name" placeholder="Full Name" required>
-<input type="text" id="passport" placeholder="Passport Number" required>
-<input type="email" id="email" placeholder="Email" required>
-<input type="tel" id="phone" placeholder="Phone (+923xxxxxxxxx)" required>
-<select id="city" required>
-<option value="">Select City</option>
-<option value="Islamabad">Islamabad</option>
-<option value="Rawalpindi">Rawalpindi</option>
-<option value="Lahore">Lahore</option>
-<option value="Karachi">Karachi</option>
-<option value="Multan">Multan</option>
-</select>
-<select id="countryTo" required>
-<option value="">Select Country Traveling To</option>
-<option value="Saudi Arabia">Saudi Arabia</option>
-<option value="UAE">UAE</option>
-<option value="Qatar">Qatar</option>
-<option value="Bahrain">Bahrain</option>
-<option value="Oman">Oman</option>
-<option value="Kuwait">Kuwait</option>
-</select>
-<button type="submit">Send Details on WhatsApp</button>
-</form>
-</section>
-
-<!-- Floating WhatsApp Button -->
-<a class="whatsapp-btn" href="https://wa.me/923136440887" target="_blank">WhatsApp Now</a>
 
 <footer>
-© 2025 GAMCA / WAFID Medical Appointment Services
+  <p>📌 We just book your appointment for GAMCA Medical</p>
+  <p>© 2025 GAMCA / WAFID Appointment Services</p>
 </footer>
 
 <script>
-// WhatsApp Form Submission
-document.getElementById('appointmentForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    var name = encodeURIComponent(document.getElementById('name').value);
-    var passport = encodeURIComponent(document.getElementById('passport').value);
-    var email = encodeURIComponent(document.getElementById('email').value);
-    var phone = encodeURIComponent(document.getElementById('phone').value);
-    var city = encodeURIComponent(document.getElementById('city').value);
-    var countryTo = encodeURIComponent(document.getElementById('countryTo').value);
-    var message = `*GAMCA / WAFID Appointment Form*%0AName: ${name}%0APassport: ${passport}%0AEmail: ${email}%0APhone: ${phone}%0ACity: ${city}%0ACountry Traveling To: ${countryTo}`;
-    window.open(`https://wa.me/923136440887?text=${message}`, '_blank');
-});
+function sendWhatsApp() {
+  var name = document.getElementById('name').value;
+  var passport = document.getElementById('passport').value;
+  var country = document.getElementById('country').value;
+  var visa = document.getElementById('visa').value;
+  var city = document.getElementById('city').value;
+  var phone = document.getElementById('phone').value;
+
+  var message = `GAMCA / WAFID Appointment Request%0A
+Name: ${name}%0A
+Passport No: ${passport}%0A
+Country: ${country}%0A
+Visa Type: ${visa}%0A
+Medical City: ${city}%0A
+Contact: ${phone}%0A
+( Passport copy will be shared here )`;
+
+  var whatsappNumber = '92XXXXXXXXXX'; // apna WhatsApp number yahan dalen
+  window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+}
 </script>
 
 </body>
