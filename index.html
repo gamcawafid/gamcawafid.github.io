@@ -12,9 +12,10 @@
     .hero-btn {display:inline-block; margin-top:15px; padding:12px 20px; background:#25D366; color:#fff; text-decoration:none; border-radius:6px; font-weight:bold}
     .section-title {text-align:center; margin:40px 0 20px; font-size:22px}
     .countries {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px}
-    .card {background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.08)}
-    .card h3 {margin-top:0}
+    .card {background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.08); text-align:center}
+    .card h3 {margin-top:0; font-size:28px}
     .card a {display:inline-block; margin-top:10px; padding:10px 15px; background:#0b5ed7; color:#fff; text-decoration:none; border-radius:5px}
+    .card p {margin:6px 0; font-size:16px}
     form {background:#fff; padding:25px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.08)}
     label {display:block; margin-top:12px; font-weight:bold}
     input, select {width:100%; padding:10px; margin-top:6px; border-radius:5px; border:1px solid #ccc}
@@ -74,11 +75,11 @@
 <label>Visa Country</label>
 <select id="country" required>
   <option value="Saudi Arabia">Saudi Arabia</option>
-  <option value="UAE/Dubai">UAE/Dubai</option>
-  <option value="Bahrain">Bahrain</option>
-  <option value="Kuwait">Kuwait</option>
+  <option value="UAE / Dubai">UAE / Dubai</option>
   <option value="Qatar">Qatar</option>
   <option value="Oman">Oman</option>
+  <option value="Kuwait">Kuwait</option>
+  <option value="Bahrain">Bahrain</option>
 </select>
 
 <label>Visa Type</label>
@@ -88,7 +89,7 @@
 </select>
 
 <label>Marital Status</label>
-<select id="status" required>
+<select id="marital" required>
   <option value="Married">Married</option>
   <option value="Unmarried">Unmarried</option>
 </select>
@@ -112,13 +113,14 @@
 <input type="file" id="passportFile" accept="image/*,application/pdf" required>
 
 <button class="submit-btn" type="submit">
-  <img class="whatsapp-icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="18">
+  <img class="whatsapp-icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="24">
   Submit 
 </button>
 
   </form>
 </div><footer>
   <p>📌 We just book your appointment for GAMCA Medical</p>
+  <p>B-224, 4th Road, Satellite Town, Rawalpindi | Contact: 0313 6440887</p>
   <p>© 2025 GAMCA / WAFID Appointment Services</p>
 </footer><script>
 function sendWhatsApp() {
@@ -126,6 +128,7 @@ function sendWhatsApp() {
   var passport = document.getElementById('passport').value;
   var country = document.getElementById('country').value;
   var visa = document.getElementById('visa').value;
+  var marital = document.getElementById('marital').value;
   var city = document.getElementById('city').value;
   var phone = document.getElementById('phone').value;
 
