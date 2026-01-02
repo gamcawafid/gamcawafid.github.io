@@ -1,125 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GAMCA/WAFID Medical Services</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-<style>
-body { font-family: 'Roboto', sans-serif; margin:0; padding:0; color:#333; }
-header { background:#004080; color:#fff; padding:15px 20px; position:sticky; top:0; z-index:1000; display:flex; justify-content:space-between; align-items:center; }
-header h1 { margin:0; font-size:22px; }
-nav a { color:#fff; text-decoration:none; margin-left:20px; font-weight:500; }
-.hero-slider { width:100%; height:400px; position:relative; }
-.slide { display:flex; align-items:center; justify-content:center; flex-direction:column; background:#e6f0ff; text-align:center; height:400px; }
-.slide h2 { font-size:28px; margin-bottom:10px; color:#004080; }
-.slide p { font-size:16px; margin-bottom:20px; max-width:600px; }
-.slide button { padding:10px 25px; font-size:16px; background:#004080; color:#fff; border:none; cursor:pointer; border-radius:5px; transition:0.3s; }
-.slide button:hover { background:#0066cc; }
-.section { padding:50px 20px; max-width:1000px; margin:0 auto; }
-.section h2 { text-align:center; color:#004080; margin-bottom:20px; font-size:26px; }
-.about p, .payment p { text-align:center; font-size:16px; line-height:1.6; }
-.about ul, .payment ul { max-width:600px; margin:20px auto 0; list-style:disc; padding-left:20px; }
-form { max-width:500px; margin:30px auto; display:flex; flex-direction:column; gap:15px; }
-form input, form select, form button { padding:12px; font-size:14px; border-radius:5px; border:1px solid #ccc; }
-form button { background:#004080; color:#fff; border:none; cursor:pointer; transition:0.3s; }
-form button:hover { background:#0066cc; }
-footer { background:#f2f2f2; text-align:center; padding:20px; font-size:14px; }
-@media(max-width:600px){ .slide h2 { font-size:22px; } .slide p { font-size:14px; } }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GAMCA/WAFID - Apply Online</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Optional: favicon -->
 </head>
 <body>
+  <!-- Header / Navbar -->
+  <header class="site-header" id="site-header" aria-label="Site header">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="GAMCA/WAFID Home">
+        <!-- Replace with your logo image or text -->
+        <img src="logo.png" alt="GAMCA/WAFID Logo" onerror="this.style.display='none'; this.parentElement.style.display='inline-block'; this.parentElement.textContent='GAMCA/WAFID'">
+      </a>
+      <nav aria-label="Primary" class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#online-registration">Apply Online</a></li>
+          <li><a href="#payment">Payment</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">Menu</button>
+    </div>
+  </header>
 
-<header>
-  <h1>GAMCA/WAFID Medical Services</h1>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#apply">Apply Online</a>
-    <a href="#payment">Payment</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <!-- Hero / Slider (3 slides) -->
+  <section id="home" class="hero" aria-label="Hero">
+    <div class="hero-slide active" style="background-image: url('hero1.jpg')">
+      <div class="overlay"></div>
+      <div class="container hero-content">
+        <h1>GAMCA / WAFID Medical Services</h1>
+        <p>Your trusted partner for GAMCA/WAFID medical clearance and registration.</p>
+        <a href="#online-registration" class="btn btn-primary">Apply Online</a>
+      </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('hero2.jpg')">
+      <div class="overlay"></div>
+      <div class="container hero-content">
+        <h1>Online Registration & Appointment</h1>
+        <p>Register online and book your medical appointment with approved centers.</p>
+        <a href="#online-registration" class="btn btn-primary">Apply Online</a>
+      </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('hero3.jpg')">
+      <div class="overlay"></div>
+      <div class="container hero-content">
+        <h1>Approved Medical Centers Only</h1>
+        <p>We work with verified centers to ensure quality and compliance.</p>
+        <a href="#online-registration" class="btn btn-primary">Apply Online</a>
+      </div>
+    </div>
 
-<!-- Hero Slider -->
-<div class="hero-slider">
-  <div class="slide">
-    <h2>GAMCA / WAFID Medical Services</h2>
-    <p>Fast, reliable and approved medical examination services for GCC countries.</p>
-    <button onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Online</button>
-  </div>
-  <div class="slide">
+    <!-- Simple slider controls (optional) -->
+    <div class="slider-dots" aria-label="Slide indicators">
+      <button class="dot active" data-slide="0"></button>
+      <button class="dot" data-slide="1"></button>
+      <button class="dot" data-slide="2"></button>
+    </div>
+  </section>
+
+  <!-- About / Benefits -->
+  <section id="about" class="container section">
+    <h2>About GAMCA / WAFID Services</h2>
+    <p>We provide streamlined GAMCA/WAFID medical clearance and registration services to help you obtain medical verification quickly and securely.</p>
+    <ul class="benefits">
+      <li><strong>Fast service</strong> – efficient processing to save you time.</li>
+      <li><strong>Approved medical centers</strong> – centers vetted for compliance.</li>
+      <li><strong>Reliable & secure</strong> – data protection and trusted partners.</li>
+    </ul>
+  </section>
+
+  <!-- Online Form / Apply Now -->
+  <section id="online-registration" class="container section" aria-label="Online Registration">
     <h2>Online Registration & Appointment</h2>
-    <p>Submit your application online and get appointment confirmation easily.</p>
-    <button onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Online</button>
-  </div>
-  <div class="slide">
-    <h2>Approved Medical Centers Only</h2>
-    <p>Medical tests are conducted only at officially approved GAMCA centers.</p>
-    <button onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Online</button>
-  </div>
-</div>
+    <form action="https://formsubmit.co/gamcaonlineslip@gmail.com" method="POST" class="apply-form" id="apply-form">
+      <!-- Hidden field for FormSubmit to know the form -->
+      <input type="hidden" name="_subject" value="New GAMCA/WAFID Application" />
+      <!-- Required fields -->
+      <label for="full-name">Full Name</label>
+      <input id="full-name" name="Full Name" type="text" placeholder="Your full name" required />
 
-<!-- About Section -->
-<div class="section about" id="home">
-  <h2>About GAMCA / WAFID Services</h2>
-  <p>We provide fast, reliable, and officially approved medical services for travelers to GCC countries. Our process is simple, safe, and transparent.</p>
-  <ul>
-    <li>Fast service at approved centers</li>
-    <li>Reliable and official medical tests</li>
-    <li>Online application & confirmation</li>
-  </ul>
-</div>
+      <label for="passport">Passport Number</label>
+      <input id="passport" name="Passport Number" type="text" placeholder="Passport number" required />
 
-<!-- Online Form Section -->
-<div class="section" id="apply">
-  <h2>Apply Online</h2>
-  <form action="https://formsubmit.co/el/dabuta" method="POST">
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="text" name="passport" placeholder="Passport Number" required>
-    <input type="tel" name="mobile" placeholder="Mobile Number" required>
-    <input type="text" name="country" placeholder="Traveling Country" required>
-    <select name="marital_status" required>
-      <option value="">Marital Status</option>
-      <option>Single</option>
-      <option>Married</option>
-    </select>
-    <input type="hidden" name="_subject" value="New GAMCA Medical Form Submission">
-    <input type="hidden" name="_template" value="table">
-    <button type="submit">Submit Application</button>
-  </form>
-</div>
+      <label for="mobile">Mobile Number</label>
+      <input id="mobile" name="Mobile Number" type="tel" placeholder="+1234567890" required />
 
-<!-- Payment Section -->
-<div class="section payment" id="payment">
-  <h2>Medical Test Fee Payment</h2>
-  <p>Pay your fee at approved medical centers only. No Online Payment option available at Medical Centers.</p>
-  <ul>
-    <li>Appointment Slip Fee Paid Online Through Jazzcash/Easypaisa or Bank Transfer</li>
-    <li>Official receipt provided by medical center</li>
-    <li>Approved GAMCA / WAFID centers only</li>
-  </ul>
-</div>
+      <label for="country">Traveling Country</label>
+      <input id="country" name="Traveling Country" type="text" placeholder="Country you are traveling from" required />
 
-<!-- Footer -->
-<footer id="contact">
-  <p>Email: <a href="mailto: gamcaonlineslip@gmail.com">gamcaonlineslip@gmail.com</a> | WhatsApp: +923136440887</p>
-  <p>© 2026 GAMCA/WAFID Medical Services Pakistan</p>
-</footer>
+      <label for="marital">Marital Status</label>
+      <select id="marital" name="Marital Status" required>
+        <option value="" disabled selected>Select status</option>
+        <option>Single</option>
+        <option>Married</option>
+      </select>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script>
-$(document).ready(function(){
-  $('.hero-slider').slick({
-    autoplay:true,
-    autoplaySpeed:5000,
-    arrows:true,
-    dots:true
-  });
-});
-</script>
+      <!-- Optional WhatsApp -->
+      <label for="whatsapp">WhatsApp (optional)</label>
+      <input id="whatsapp" name="WhatsApp" type="text" placeholder="WhatsApp number for follow-up" />
 
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <p class="note">
+      After submission, you will receive a confirmation email. You can also contact us via WhatsApp for follow-up.
+    </p>
+  </section>
+
+  <!-- Payment Instructions -->
+  <section id="payment" class="container section" aria-label="Payment Instructions">
+    <h2>Payment Instructions</h2>
+    <div class="payment-methods">
+      <div class="card">
+        <h3>Pay at Center</h3>
+        <p>Pay directly at the approved medical center after your appointment is scheduled.</p>
+      </div>
+      <div class="card">
+        <h3>Online Payment Coming Soon</h3>
+        <p>We are working to introduce online payment options soon.</p>
+      </div>
+    </div>
+    <p class="receipt-info">Official receipt info: Include your application ID in the receipt for reference.</p>
+  </section>
+
+  <!-- Contact / Footer -->
+  <section id="contact" class="container section" aria-label="Contact">
+    <h2>Contact</h2>
+    <ul class="contact-list">
+      <li>Email: <a href="mailto: gamcaonlineslip@gmail.com">gamcaonlineslip@gmail.com</a></li>
+      <li>Phone: <a href="tel:+1234567890">+1 234 567 890</a></li>
+      <li>WhatsApp: <a href="https://wa.me/923136440887" target="_blank" rel="noopener">Chat on WhatsApp</a></li>
+      <li>Facebook / Instagram: (optional)</li>
+    </ul>
+  </section>
+
+  <footer class="site-footer" id="footer" aria-label="Footer">
+    <div class="container">
+      <p class="disclaimer">Disclaimer / Official notice: This site provides information and links to registered GAMCA/WAFID services. Verify details with official sources.</p>
+      <p class="copyright">&copy; <span id="year"></span> GAMCA/WAFID</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-                                           </html>
+</html>
