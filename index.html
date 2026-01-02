@@ -3,165 +3,214 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GAMCA/WAFID Medical Services</title>
+<title>GAMCA / WAFID Medical Services Pakistan</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
 <style>
-* { box-sizing:border-box; margin:0; padding:0; }
-body { font-family:'Roboto', sans-serif; color:#333; }
-header { background:#004080; color:#fff; padding:15px 20px; position:sticky; top:0; z-index:1000; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
-header h1 { font-size:20px; margin-bottom:5px; }
-nav { display:flex; flex-wrap:wrap; }
-nav a { color:#fff; text-decoration:none; margin-left:15px; font-weight:500; font-size:14px; }
-.hero-slider { width:100%; }
-.slide { display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center; height:60vh; background:#e6f0ff; padding:20px; color:#004080; }
-.slide h2 { font-size:24px; margin-bottom:10px; }
-.slide p { font-size:14px; margin-bottom:20px; max-width:90%; }
-.slide button { padding:10px 25px; font-size:14px; background:#004080; color:#fff; border:none; cursor:pointer; border-radius:5px; transition:0.3s; }
-.slide button:hover { background:#0066cc; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Roboto,sans-serif;color:#333}
+header{background:#004080;color:#fff;padding:15px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center}
+header h1{font-size:20px}
+nav a{color:#fff;text-decoration:none;margin:0 8px;font-size:14px}
 
-.section { padding:40px 15px; width:100%; max-width:1000px; margin:0 auto; }
-.section h2 { text-align:center; color:#004080; margin-bottom:20px; font-size:22px; }
-.about p, .payment p, .appointment p { text-align:center; font-size:14px; line-height:1.6; }
-.about ul, .payment ul, .appointment ul { max-width:500px; margin:15px auto; list-style:disc; padding-left:20px; }
-.appointment ul li { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; font-size:14px; }
-.appointment ul li img.flag { width:25px; margin-right:10px; vertical-align:middle; }
+.hero-slider .slide{
+height:60vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:#fff;
+background-size:cover;
+background-position:center;
+padding:20px;
+}
+.slide h2{font-size:26px;margin-bottom:10px}
+.slide p{font-size:14px;max-width:600px;margin-bottom:15px}
+.slide button{
+background:#004080;
+color:#fff;
+border:none;
+padding:10px 25px;
+border-radius:5px;
+cursor:pointer;
+}
 
-form { max-width:100%; margin:20px auto; display:flex; flex-direction:column; gap:10px; }
-form input, form select, form button { padding:10px; font-size:14px; border-radius:5px; border:1px solid #ccc; width:100%; }
-form button { background:#004080; color:#fff; border:none; cursor:pointer; transition:0.3s; }
-form button:hover { background:#0066cc; }
+.section{padding:40px 15px;max-width:1000px;margin:auto}
+.section h2{color:#004080;text-align:center;margin-bottom:20px}
+.section h3{color:#004080;margin-top:20px}
+.section p{font-size:14px;line-height:1.6;margin-bottom:10px}
 
-footer { background:#f2f2f2; text-align:center; padding:20px; font-size:12px; display:flex; flex-direction:column; align-items:center; gap:5px; }
-footer a { color:#004080; text-decoration:none; }
-.whatsapp { display:flex; align-items:center; gap:5px; margin-top:5px; font-weight:bold; color:#25D366; text-decoration:none; }
-.whatsapp img { width:20px; height:20px; }
+.about ul, .appointment ul{max-width:600px;margin:15px auto;padding-left:20px}
+.about ul li, .appointment ul li{margin-bottom:8px;font-size:14px}
+
+form{max-width:500px;margin:auto;display:flex;flex-direction:column;gap:10px}
+form input,form select,form button{
+padding:10px;
+font-size:14px;
+border-radius:5px;
+border:1px solid #ccc
+}
+form button{background:#004080;color:#fff;border:none}
+
+.appointment ul li{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.flag{width:25px;margin-right:8px}
+
+footer{
+background:#f2f2f2;
+text-align:center;
+padding:20px;
+font-size:12px
+}
+.whatsapp{
+display:inline-flex;
+align-items:center;
+gap:5px;
+color:#25D366;
+font-weight:bold;
+text-decoration:none;
+}
+.whatsapp img{width:20px}
 
 @media(max-width:768px){
-  header h1 { font-size:18px; width:100%; text-align:center; margin-bottom:10px; }
-  nav { justify-content:center; width:100%; }
-  .slide h2 { font-size:20px; }
-  .slide p { font-size:13px; }
-  .slide button { font-size:13px; padding:8px 20px; }
-  .section h2 { font-size:20px; }
-  .appointment ul li { flex-direction:column; text-align:center; }
-}
-@media(max-width:480px){
-  .slide { height:50vh; padding:10px; }
-  .slide h2 { font-size:18px; }
-  .slide p { font-size:12px; }
-  .section h2 { font-size:18px; }
-  form input, form select, form button { font-size:13px; padding:8px; }
-  footer { font-size:11px; }
+.slide h2{font-size:20px}
+.appointment ul li{flex-direction:column}
 }
 </style>
 </head>
+
 <body>
 
 <header>
-  <h1>GAMCA/WAFID Medical Services</h1>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#apply">Apply Online</a>
-    <a href="#appointment">Book Appointment</a>
-    <a href="#payment">Payment</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<h1>GAMCA / WAFID Medical</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#apply">Apply</a>
+<a href="#appointment">Appointment</a>
+<a href="#guide">Guide</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-<!-- Hero Slider -->
+<!-- SLIDER -->
 <div class="hero-slider">
-  <div class="slide" style="background:url('images/slider1.jpg') center/cover no-repeat;">
-    <h2>GAMCA / WAFID Medical Services</h2>
-    <p>Fast, reliable and approved medical examination services for GCC countries.</p>
-    <button onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Online</button>
-  </div>
-  <div class="slide" style="background:url('images/slider2.jpg') center/cover no-repeat;">
-    <h2>Online Registration & Appointment</h2>
-    <p>Submit your application online and get appointment confirmation easily.</p>
-    <button onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Online</button>
-  </div>
-  <div class="slide" style="background:url('images/slider3.jpg') center/cover no-repeat;">
-    <h2>Approved Medical Centers Only</h2>
-    <p>Medical tests are conducted only at officially approved GAMCA centers.</p>
-    <button onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Online</button>
-  </div>
+<div class="slide" style="background-image:url('images/slider1.jpg')">
+<h2>GAMCA / WAFID Medical Services</h2>
+<p>Official medical appointment booking for GCC countries</p>
+<button onclick="document.getElementById('apply').scrollIntoView()">Apply Online</button>
 </div>
 
-<!-- About Section -->
+<div class="slide" style="background-image:url('images/slider2.jpg')">
+<h2>Fast & Reliable Process</h2>
+<p>Get your appointment slip within minutes</p>
+</div>
+
+<div class="slide" style="background-image:url('images/slider3.jpg')">
+<h2>Approved Medical Centers</h2>
+<p>Only authorized GAMCA / WAFID centers</p>
+</div>
+</div>
+
+<!-- ABOUT -->
 <div class="section about" id="home">
-  <h2>About GAMCA / WAFID Services</h2>
-  <p>We provide fast, reliable, and officially approved medical services for travelers to GCC countries. Our process is simple, safe, and transparent.</p>
-  <ul>
-    <li><img src="images/icon1.png" width="20"> Fast service at approved centers</li>
-    <li><img src="images/icon2.png" width="20"> Reliable and official medical tests</li>
-    <li><img src="images/icon3.png" width="20"> Online application & confirmation</li>
-  </ul>
+<h2>About GAMCA / WAFID</h2>
+<p>
+We provide official GAMCA / WAFID medical appointment services for candidates traveling to GCC countries.
+</p>
+<ul>
+<li>✔ Approved medical centers</li>
+<li>✔ Online registration</li>
+<li>✔ Fast appointment slip</li>
+</ul>
 </div>
 
-<!-- Online Form Section -->
+<!-- APPLY FORM -->
 <div class="section" id="apply">
-  <h2>Apply Online</h2>
-  <form action="https://formsubmit.co/gamcaonlineslip@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="text" name="passport" placeholder="Passport Number" required>
-    <input type="tel" name="mobile" placeholder="Mobile Number" required>
-    <input type="text" name="country" placeholder="Traveling Country" required>
-    <select name="marital_status" required>
-      <option value="">Marital Status</option>
-      <option>Single</option>
-      <option>Married</option>
-    </select>
-    <input type="hidden" name="_subject" value="New GAMCA Medical Form Submission">
-    <input type="hidden" name="_template" value="table">
-    <button type="submit">Submit Application</button>
-  </form>
+<h2>Apply Online</h2>
+<form action="https://formsubmit.co/gamcaonlineslip@gmail.com" method="POST">
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="text" name="passport" placeholder="Passport Number" required>
+<input type="tel" name="mobile" placeholder="Mobile Number" required>
+<input type="text" name="country" placeholder="Travel Country" required>
+<select name="marital" required>
+<option value="">Marital Status</option>
+<option>Single</option>
+<option>Married</option>
+</select>
+<input type="hidden" name="_subject" value="New GAMCA Application">
+<button type="submit">Submit</button>
+</form>
 </div>
 
-<!-- Book Appointment & Payment Section -->
+<!-- APPOINTMENT + PAYMENT -->
 <div class="section appointment" id="appointment">
-  <h2>Book Your Appointment</h2>
-  <ul>
-    <li><img class="flag" src="images/saudi.png"> Saudi Arabia <span>PKR 4000/-</span></li>
-    <li><img class="flag" src="images/bahrain.png"> Bahrain <span>PKR 4000/-</span></li>
-    <li><img class="flag" src="images/uae.png"> UAE / Dubai <span>PKR 4000/-</span></li>
-    <li><img class="flag" src="images/qatar.png"> Qatar <span>PKR 4000/-</span></li>
-    <li><img class="flag" src="images/kuwait.png"> Kuwait <span>PKR 4000/-</span></li>
-    <li><img class="flag" src="images/oman.png"> Oman <span>PKR 4000/-</span></li>
-  </ul>
+<h2>Book Your Appointment</h2>
+<ul>
+<li><span><img class="flag" src="images/saudi.png">Saudi Arabia</span>PKR 4000/-</li>
+<li><span><img class="flag" src="images/bahrain.png">Bahrain</span>PKR 4000/-</li>
+<li><span><img class="flag" src="images/uae.png">UAE / Dubai</span>PKR 4000/-</li>
+<li><span><img class="flag" src="images/qatar.png">Qatar</span>PKR 4000/-</li>
+<li><span><img class="flag" src="images/kuwait.png">Kuwait</span>PKR 4000/-</li>
+<li><span><img class="flag" src="images/oman.png">Oman</span>PKR 4000/-</li>
+</ul>
 
-  <h3>Available Cities in Pakistan:</h3>
-  <p>Islamabad, Rawalpindi, Peshawar, Multan, Lahore, Karachi, Gujranwala, Sialkot</p>
+<h3>Available Cities in Pakistan</h3>
+<p>Islamabad, Rawalpindi, Lahore, Karachi, Multan, Peshawar, Gujranwala, Sialkot</p>
 
-  <h3>Payment Procedure:</h3>
-  <ol>
-    <li>Send your details and a <strong>scan/photo of your passport first page</strong> via WhatsApp: <a href="https://wa.me/923136440887" target="_blank">+92 313 6440887</a></li>
-    <li>Pay your appointment fee <strong>PKR 4000/-</strong> through <strong>JazzCash / Easypaisa / Bank Transfer</strong></li>
-    <li>Once payment is received, you will get your <strong>appointment slip within 10 minutes</strong> at a nearby approved medical center</li>
-  </ol>
+<h3>Payment Procedure</h3>
+<ol>
+<li>Send your details & passport first page on WhatsApp</li>
+<li>Pay PKR 4000/- via JazzCash / Easypaisa / Bank Transfer</li>
+<li>Get appointment slip within 10 minutes nearby</li>
+</ol>
 </div>
 
-<!-- Footer -->
+<!-- GUIDE / ARTICLE -->
+<div class="section" id="guide">
+<h2>How To Get GAMCA Medical Slip Online In 2025</h2>
+<p style="color:#666;font-size:13px;text-align:center">
+By Team Gamca | May 16, 2025
+</p>
+
+<p>
+If you’re planning to work in a GCC country, obtaining a GAMCA medical appointment slip is mandatory.
+</p>
+
+<h3>Importance of GAMCA Medical Test</h3>
+<p>
+The GAMCA medical test ensures that a worker is medically fit and free from infectious diseases.
+</p>
+
+<h3>How to Start GAMCA Registration</h3>
+<ol>
+<li>Fill the application form on this website</li>
+<li>Send WhatsApp message at +92-313-6440887</li>
+</ol>
+</div>
+
+<!-- FOOTER -->
 <footer id="contact">
-  <p>Email: <a href="mailto:gamcaonlineslip@gmail.com">gamcaonlineslip@gmail.com</a></p>
-  <a class="whatsapp" href="https://wa.me/923136440887" target="_blank">
-    <img src="images/whatsapp.png" alt="WhatsApp"> +92 313 6440887
-  </a>
-  <p>© 2026 GAMCA/WAFID Medical Services Pakistan</p>
+<p>Email: <a href="mailto:gamcaonlineslip@gmail.com">gamcaonlineslip@gmail.com</a></p>
+<a class="whatsapp" href="https://wa.me/923136440887">
+<img src="images/whatsapp.png"> +92 313 6440887
+</a>
+<p>© 2026 GAMCA / WAFID Pakistan</p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
-$(document).ready(function(){
-  $('.hero-slider').slick({
-    autoplay:true,
-    autoplaySpeed:5000,
-    arrows:true,
-    dots:true,
-    adaptiveHeight:true
-  });
+$('.hero-slider').slick({
+autoplay:true,
+dots:true,
+arrows:false
 });
 </script>
 
