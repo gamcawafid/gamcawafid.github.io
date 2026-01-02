@@ -148,3 +148,96 @@
   <script src="script.js"></script>
 </body>
 </html>
+:root{
+  --bg: #f7f7f7;
+  --white: #fff;
+  --text: #1a1a1a;
+  --primary: #1e6feb;
+  --muted: #6b7280;
+  --card: #fff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Arial, sans-serif;scroll-behavior:smooth}
+.container{width: min(1100px, 90%); margin:0 auto}
+
+.site-header{
+  position: sticky; top:0; z-index: 1000;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: saturate(1.2) blur(2px);
+  border-bottom:1px solid #e5e5e5;
+}
+.header-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+.logo img{height:38px}
+.main-nav ul{list-style:none; display:flex; gap:1rem; margin:0; padding:0}
+.main-nav a{text-decoration:none; color:var(--text); padding:8px 12px; border-radius:6px}
+.main-nav a:hover, .main-nav a:focus{background:#f0f0f0}
+.nav-toggle{display:none; background:transparent; border:1px solid #ddd; padding:8px 12px; border-radius:6px}
+@media (max-width: 800px){
+  .main-nav{display:none; width:100%}
+  .main-nav ul{flex-direction:column; gap:0}
+  .nav-toggle{display:inline-block}
+}
+
+.hero{position: relative; height: 60vh; display:flex; align-items:center; overflow:hidden}
+.hero-slide{ position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transition: opacity .6s ease; display:flex; align-items:center}
+.hero-slide.active{opacity:1}
+.hero-slide .overlay{position:absolute; inset:0; background: rgba(0,0,0,0.3)}
+.hero-content{ position:relative; color:white; z-index:1}
+.hero-content h1{ font-size: clamp(1.8rem, 3vw + 1rem, 3rem); margin:0 0 .5rem}
+.hero-content p{ margin:0 0 1rem; font-size:1.1rem}
+.btn{ display:inline-block; padding:12px 18px; border-radius:6px; text-decoration:none; border:1px solid transparent; font-weight:600}
+.btn-primary{ background:var(--primary); color:white}
+.section{ padding:60px 0; }
+.benefits{ padding-left:1rem; }
+.benefits li{ margin:0.5rem 0 }
+.card{ background:var(--card); padding:1rem; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05); min-width:240px}
+.payment-methods{ display:flex; gap:1rem; flex-wrap:wrap; }
+.contact-list{ list-style:none; padding:0; }
+.disclaimer{ font-size:. nine; color:var(--muted); }
+.site-footer{ background:#111; color:#eee; padding:20px 0; }
+.site-footer .container{ display:flex; flex-direction:column; gap:8px; align-items:flex-start}
+a{ color: var(--primary); text-decoration:none}
+.note{ color:var(--muted); font-size:.95rem }
+@media (max-width: 700px){
+  .hero{ height: 50vh; }
+  .payment-methods{ flex-direction:column; }
+  .site-header{ position: sticky; top:0; }
+}
+// Simple hero slider
+(function(){
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.dot');
+  let idx = 0;
+  function show(i){
+    slides.forEach((s, k) => s.classList.toggle('active', k===i));
+    dots.forEach((d, k)=> d.classList.toggle('active', k===i));
+  }
+  function next(){
+    idx = (idx+1) % slides.length;
+    show(idx);
+  }
+  let timer = setInterval(next, 5000);
+  dots.forEach((d, i)=> d.addEventListener('click', ()=> { clearInterval(timer); idx=i; show(i); timer = setInterval(next, 5000); }));
+  // Pause on hover
+  const hero = document.querySelector('#home');
+  hero && hero.addEventListener('mouseenter', ()=> clearInterval(timer));
+  hero && hero.addEventListener('mouseleave', ()=> timer = setInterval(next, 5000));
+})();
+
+// Simple mobile nav toggle
+(function(){
+  const btn = document.getElementById('navToggle');
+  const nav = document.getElementById('main-nav');
+  if(!btn || !nav) return;
+  btn.addEventListener('click', ()=> {
+    const expanded = nav.style.display === 'block';
+    nav.style.display = expanded ? 'none' : 'block';
+  });
+  // collapse on link click (mobile)
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> {
+    if (window.innerWidth <= 800) nav.style.display = 'none';
+  }));
+})();
+
+// Footer year
+document.getElementById('year')?.textContent = new Date().getFullYear();
