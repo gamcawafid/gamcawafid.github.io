@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GAMCA/WAFID Medical Services</title>
+<title>GAMCA / WAFID Medical Services Pakistan</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Roboto',sans-serif;color:#333}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Roboto,sans-serif;color:#333}
 
 /* HEADER */
 header{
 background:#004080;color:#fff;padding:15px 20px;
-position:sticky;top:0;z-index:1000;
-display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center
+display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;
+position:sticky;top:0;z-index:1000
 }
 header h1{font-size:20px}
 nav a{color:#fff;text-decoration:none;margin:8px;font-size:14px}
@@ -29,18 +29,17 @@ height:65vh;display:flex;flex-direction:column;
 justify-content:center;align-items:center;text-align:center;
 color:#fff;padding:20px
 }
-.slide h2{font-size:32px;margin-bottom:10px}
-.slide p{font-size:16px;margin-bottom:20px;max-width:700px}
+.slide h2{font-size:34px;margin-bottom:10px}
+.slide p{font-size:17px;margin-bottom:20px;max-width:800px}
 .slide button{
-padding:12px 30px;font-size:16px;
-background:#004080;color:#fff;border:none;border-radius:6px;cursor:pointer
+padding:12px 30px;font-size:16px;border:none;
+background:#004080;color:#fff;border-radius:6px;cursor:pointer
 }
 
-/* SECTIONS */
+/* SECTION */
 .section{padding:50px 20px;max-width:1100px;margin:auto}
 .section h2{
-text-align:center;color:#004080;
-font-size:32px;margin-bottom:25px
+text-align:center;font-size:32px;margin-bottom:25px;color:#004080
 }
 
 /* FORM */
@@ -50,39 +49,42 @@ padding:12px;font-size:15px;border-radius:6px;border:1px solid #ccc
 }
 form button{background:#004080;color:#fff;border:none}
 
-/* FLAGS & COUNTRIES */
+/* APPOINTMENT */
 .appointment-grid{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;margin-top:30px
 }
 .country-box{
-border:1px solid #ddd;padding:20px;border-radius:10px;
+border:1px solid #ddd;padding:18px;border-radius:10px;
 display:flex;align-items:center;gap:15px;font-size:18px;font-weight:600
 }
-.country-box img{
-width:50px;height:auto
-}
+.country-box img{width:55px}
 .price{margin-left:auto;color:#004080;font-weight:700}
 
 /* CITIES */
 .cities{
 display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;margin-top:20px;font-size:18px;text-align:center
+gap:15px;margin-top:25px
 }
 .city{
-background:#f2f6ff;padding:15px;border-radius:8px;font-weight:600
+background:#f2f6ff;padding:15px;border-radius:8px;
+font-size:18px;font-weight:600;text-align:center
 }
 
+/* BLOG */
+#blog p,#blog li{font-size:16px;line-height:1.7}
+#blog ul{max-width:700px;margin:20px auto}
+
 /* PAYMENT */
-.payment ol{max-width:800px;margin:20px auto;font-size:16px}
+.payment ol{max-width:900px;margin:auto;font-size:17px}
 .payment li{margin-bottom:12px}
 
 /* FOOTER */
 footer{
-background:#f2f2f2;text-align:center;padding:25px;font-size:14px
+background:#f2f2f2;padding:25px;text-align:center;font-size:14px
 }
 
-/* FLOATING WHATSAPP */
+/* WHATSAPP FLOAT */
 .whatsapp-float{
 position:fixed;bottom:20px;right:20px;
 background:#25D366;color:#fff;
@@ -103,43 +105,44 @@ text-decoration:none;font-weight:700;z-index:999
 <body>
 
 <header>
-<h1>GAMCA / WAFID Medical Services</h1>
+<h1>GAMCA / WAFID Medical</h1>
 <nav>
 <a href="#home">Home</a>
 <a href="#apply">Apply</a>
 <a href="#appointment">Appointment</a>
+<a href="#payment">Payment</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <!-- SLIDER -->
-<div class="hero-slider">
+<div class="hero-slider" id="home">
 <div class="slide" style="background:url('images/slider1.jpg') center/cover">
 <h2>GAMCA / WAFID Medical Appointment</h2>
-<p>Official medical services for all GCC countries</p>
+<p>Official medical services for GCC countries</p>
 <button onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Online</button>
 </div>
 
 <div class="slide" style="background:url('images/slider2.jpg') center/cover">
 <h2>Fast & Verified Process</h2>
-<p>Get your appointment slip within minutes</p>
+<p>Appointment slip within minutes</p>
 <button onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Online</button>
 </div>
 
 <div class="slide" style="background:url('images/slider3.jpg') center/cover">
 <h2>Approved Medical Centers</h2>
-<p>Only GAMCA / WAFID authorized centers</p>
+<p>100% Official GAMCA / WAFID</p>
 <button onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Online</button>
 </div>
 </div>
 
-<!-- APPLY FORM -->
+<!-- APPLY -->
 <div class="section" id="apply">
 <h2>Apply Online</h2>
 <form action="https://formsubmit.co/gamcaonlineslip@gmail.com" method="POST" enctype="multipart/form-data">
 <input type="text" name="name" placeholder="Full Name" required>
 <input type="text" name="passport_no" placeholder="Passport Number" required>
-<input type="file" name="passport_copy" accept="image/*,application/pdf" required>
+<input type="file" name="passport_copy" required>
 <input type="tel" name="mobile" placeholder="Mobile Number" required>
 <select name="marital_status" required>
 <option value="">Marital Status</option>
@@ -151,7 +154,7 @@ text-decoration:none;font-weight:700;z-index:999
 </div>
 
 <!-- APPOINTMENT -->
-<div class="section appointment" id="appointment">
+<div class="section" id="appointment">
 <h2>Book Your Appointment</h2>
 
 <div class="appointment-grid">
@@ -161,62 +164,6 @@ text-decoration:none;font-weight:700;z-index:999
 <div class="country-box"><img src="images/qatar.png"> Qatar <span class="price">PKR 4000</span></div>
 <div class="country-box"><img src="images/kuwait.png"> Kuwait <span class="price">PKR 4000</span></div>
 <div class="country-box"><img src="images/oman.png"> Oman <span class="price">PKR 4000</span></div>
-</div>
-
-<!-- SEO BLOG SECTION -->
-<div class="section" id="blog">
-<h2>How To Get GAMCA Medical Slip Online In 2025</h2>
-
-<p style="max-width:900px;margin:auto;font-size:16px;line-height:1.7">
-If you are planning to work in any GCC country, obtaining a GAMCA (WAFID) medical
-appointment slip is a mandatory requirement. The GAMCA medical test ensures that
-the applicant is medically fit and free from infectious diseases.
-</p>
-
-<h3 style="margin-top:25px;color:#004080">Importance of GAMCA Medical Test</h3>
-<p style="max-width:900px;margin:auto;font-size:16px;line-height:1.7">
-The GAMCA medical test is required for employment visas for Saudi Arabia, UAE,
-Qatar, Oman, Bahrain and Kuwait. It protects both the employee and the host
-country’s community.
-</p>
-
-<h3 style="margin-top:25px;color:#004080">Methods: How to Start GAMCA Registration</h3>
-<ul style="max-width:700px;margin:20px auto;font-size:16px">
-<li>Fill the online application form on this website</li>
-<li>Send your details on WhatsApp:
-<a href="https://wa.me/923136440887" target="_blank">+92 313 6440887</a></li>
-</ul>
-
-<p style="text-align:center;font-weight:700;margin-top:20px">
-Processing Time: <strong>10–30 Minutes</strong><br>
-Appointment Fee: <strong>PKR 4000/-</strong>
-</p>
-</div>
-
-<!-- PAYMENT DETAILS -->
-<div class="section payment" id="payment">
-<h2>Payment Procedure</h2>
-
-<ol style="max-width:900px;margin:auto;font-size:17px;line-height:1.8">
-<li>Send your <strong>Full Name, Passport Number</strong> and
-<strong>Passport First Page Photo</strong> on WhatsApp</li>
-
-<li>Pay <strong>PKR 4000/-</strong> through:
-<ul>
-<li>JazzCash</li>
-<li>Easypaisa</li>
-<li>Bank Transfer</li>
-</ul>
-</li>
-
-<li>After confirmation, you will receive your
-<strong>GAMCA / WAFID appointment slip within 10 minutes</strong>
-at the nearest approved medical center.</li>
-</ol>
-
-<p style="text-align:center;font-size:18px;font-weight:700;color:#004080">
-📲 WhatsApp: <a href="https://wa.me/923136440887" target="_blank">+92 313 6440887</a>
-</p>
 </div>
 
 <h2 style="margin-top:50px">Available Cities in Pakistan</h2>
@@ -232,14 +179,36 @@ at the nearest approved medical center.</li>
 </div>
 </div>
 
-<!-- FOOTER -->
+<!-- PAYMENT -->
+<div class="section payment" id="payment">
+<h2>Payment Procedure</h2>
+<ol>
+<li>Send details & passport first page on WhatsApp</li>
+<li>Pay PKR 4000/- via JazzCash / Easypaisa / Bank Transfer</li>
+<li>Get appointment slip within 10 minutes</li>
+</ol>
+<p style="text-align:center;font-weight:700">
+WhatsApp: <a href="https://wa.me/923136440887">+92 313 6440887</a>
+</p>
+</div>
+
+<!-- BLOG -->
+<div class="section" id="blog">
+<h2>How To Get GAMCA Medical Slip Online In 2025</h2>
+<p>If you are planning to work in a GCC country, GAMCA (WAFID) medical test is mandatory. It ensures medical fitness and safety.</p>
+<ul>
+<li>Apply online using the form</li>
+<li>Send details via WhatsApp</li>
+<li>Receive appointment slip quickly</li>
+</ul>
+</div>
+
 <footer id="contact">
 <p>Email: gamcaonlineslip@gmail.com</p>
 <p>WhatsApp: +92 313 6440887</p>
-<p>© 2026 GAMCA/WAFID Pakistan</p>
+<p>© 2026 GAMCA / WAFID Pakistan</p>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/923136440887" class="whatsapp-float" target="_blank">
 <img src="images/whatsapp.png"> WhatsApp
 </a>
@@ -247,11 +216,7 @@ at the nearest approved medical center.</li>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
-$('.hero-slider').slick({
-autoplay:true,
-dots:true,
-arrows:false
-});
+$('.hero-slider').slick({autoplay:true,dots:true,arrows:false});
 </script>
 
 </body>
